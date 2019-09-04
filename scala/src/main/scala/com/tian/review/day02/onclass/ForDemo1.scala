@@ -1,6 +1,7 @@
-package com.tian.preview.day02.onclass
+package com.tian.review.day02.onclass
 
-import scala.collection.parallel.immutable
+import scala.collection.immutable
+
 
 /**
  * @author tian
@@ -23,7 +24,7 @@ object ForDemo1 {
             if (i == j) println()
         }
         // for推导
-//        val arr: immutable.IndexedSeq[Int] = for (i <- 1 to 10) yield i * i * i
-        // TODO 更优雅的写法
+        val arr: immutable.IndexedSeq[Int] = for (i <- 1 to 10) yield i * i * i
+        println((1 to 10).map(_ + 3)) //每个元素加3
     }
 }

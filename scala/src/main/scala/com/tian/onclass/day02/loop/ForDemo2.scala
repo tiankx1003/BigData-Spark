@@ -1,4 +1,4 @@
-package com.atguigu.scala0508.day02.loop
+package com.tian.onclass.day02.loop
 
 import scala.collection.immutable
 

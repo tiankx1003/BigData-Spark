@@ -1,28 +1,22 @@
-package com.atguigu.scala0508.day02.fun
+package com.tian.onclass.day02.fun
 
 object FunDemo3 {
     def main(args: Array[String]) {
         // 5 + 3,  6 + 3, 7+3 ....
-        
+
         /*add(2,3)
         add(3,3)
         add(4,3)
         println(add(4))
         println(add(4, 5))*/
-        
         println(add(10, 20, 30))
-        
         println(add(10, c = 20)) // 命名参数
-        
-        
         println(add(b = 1, c = 2, a = 10))
-        
-        println(sumPrime(100, 101))
+        println(sumPrime(100, 1000))
     }
-    
+
     def add(a: Int, b: Int = 3, c: Int) = a + b + c
-    
-    
+
     // 100 - 1000 之间所有的质数的和
     def sumPrime(from: Int, to: Int) = {
         var sum = 0
@@ -31,14 +25,14 @@ object FunDemo3 {
         }
         sum
     }
-    
+
     def isPrime(num: Int): Boolean = {
         for (i <- 2 until num) {
             if (num % i == 0) return false
         }
         true
     }
-    
+
 }
 
 /*

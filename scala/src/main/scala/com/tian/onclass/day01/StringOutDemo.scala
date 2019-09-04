@@ -1,4 +1,4 @@
-package com.atguigu.scala0508.day01
+package com.tian.onclass.day01
 
 import scala.io.StdIn
 

@@ -1,4 +1,4 @@
-package com.tian.preview.day02.onclass.obj
+package com.tian.review.day02.onclass.obj
 
 import scala.beans.BeanProperty
 

@@ -1,4 +1,4 @@
-package com.atguigu.scala0508.day02.obj
+package com.tian.onclass.day02.obj
 
 object ObjDemo2 {
     def main(args: Array[String]): Unit = {

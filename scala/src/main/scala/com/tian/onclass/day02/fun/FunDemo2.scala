@@ -1,4 +1,4 @@
-package com.atguigu.scala0508.day02.fun
+package com.tian.onclass.day02.fun
 
 object FunDemo2 {
     def main(args: Array[String]) {

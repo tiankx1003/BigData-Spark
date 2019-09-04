@@ -1,4 +1,4 @@
-package com.atguigu.scala0508.day01.ifdemo
+package com.tian.onclass.day01.ifdemo
 
 /**
   * Author lzc

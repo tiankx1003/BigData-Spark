@@ -1,4 +1,4 @@
-package com.tian.review.day02.highfun.fun
+package com.tian.review.day02.fun
 
 /**
  * @author tian

@@ -1,4 +1,4 @@
-package com.atguigu.scala0508.day01.loopdemo
+package com.tian.onclass.day01.loopdemo
 
 object WhileDemo1 {
     def main(args: Array[String]): Unit = {

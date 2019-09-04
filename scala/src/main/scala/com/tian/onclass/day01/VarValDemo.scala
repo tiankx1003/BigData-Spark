@@ -1,6 +1,6 @@
-package com.atguigu.scala0508.day01
+package com.tian.onclass.day01
 
-import com.atguigu.My
+//import com.atguigu.My
 
 object VarValDemo {
     def main(args: Array[String]) = {

@@ -1,4 +1,4 @@
-package com.atguigu.scala0508.day02.highfun
+package com.tian.onclass.day02.highfun
 
 /**
   * Author lzc
