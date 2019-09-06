@@ -7,3 +7,9 @@ package com.tian.onclass.day03.ext
 object ExtendsDemo2 {
 
 }
+
+class AA(val n:Int)
+
+class BB() extends AA(10){ // 必须通过传值的方式调用父类的主构造
+    override val n: Int = 100
+}

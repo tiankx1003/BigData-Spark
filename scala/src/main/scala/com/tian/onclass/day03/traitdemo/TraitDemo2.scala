@@ -1,4 +1,4 @@
-package com.tian.onclass.day03.`trait`
+package com.tian.onclass.day03.traitdemo
 
 /**
  * 执行顺序

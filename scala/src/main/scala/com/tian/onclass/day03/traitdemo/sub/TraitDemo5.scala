@@ -1,4 +1,4 @@
-package com.tian.onclass.day03.`trait`.sub
+package com.tian.onclass.day03.traitdemo.sub
 
 /**
  * 动态叠加(动态混入)

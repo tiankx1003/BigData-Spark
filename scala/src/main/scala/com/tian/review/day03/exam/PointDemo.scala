@@ -7,9 +7,9 @@ package com.tian.review.day03.exam
  * @author tian
  *         2019/9/6 19:30
  */
-object Points {
+object PointDemo {
     def main(args: Array[String]): Unit = {
-        Point(3, 4)
+        println(Point(3, 4))
     }
 }
 
@@ -17,6 +17,6 @@ object Point {
     def apply(x: Double, y: Double): Point = new Point(x, y)
 }
 
-class Point(x: Double, y: Double) {
-
+class Point(var x: Double, var y: Double) {
+    override def toString: String = s"x:$x,y:$y"
 }

@@ -7,3 +7,8 @@ package com.tian.review.day03.ext
 object ExtendsDemo3 {
 
 }
+
+class A3(val n:Int)
+class B3() extends A3(100)//必须传值给父类的主构造
+
+
