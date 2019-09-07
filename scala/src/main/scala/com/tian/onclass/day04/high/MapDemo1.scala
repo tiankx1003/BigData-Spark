@@ -19,8 +19,13 @@ object MapDemo1 {
         println(list3)
         val str = "abc".map(_ + 3)
         println(str)
+
+        val lists = List(30, 50, 30)
+        println(lists.map(x => x))
+//        println(lists.map(_)) //TODO 见PartDemo部分引用函数
     }
 }
+
 /*
 foreach 和 map的区别
 foreach 仅仅是对集合遍历
