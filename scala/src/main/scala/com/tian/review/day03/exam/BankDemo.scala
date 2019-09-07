@@ -24,15 +24,23 @@ class BankAccount(initialBalance: Double) {
         balance
     }
 }
-class CheckingAccount(initialBalance:Double) extends BankAccount(initialBalance){
-    private var balance = this.initialBalance
+
+class CheckingAccount(initialBalance: Double) extends BankAccount(initialBalance) {
+    //    private var balance = this.initialBalance
+
     override def deposit(amount: Double): Double = {
+        /*
         balance += amount -1
         balance
+        */
+        super.deposit(amount - 1)
     }
 
     override def withdraw(amount: Double): Double = {
+        /*
         balance -= amount + 1
         balance
+        */
+        super.withdraw(amount + 1)
     }
 }

@@ -22,7 +22,7 @@ abstract class Color {
     def isRed: Boolean
 }
 
-class Card(shape: String) extends Color {
+class Card(val shape: String) extends Color {
     override def isRed: Boolean = {
         if (shape == "Heart" || shape == "Diamond") true
         //        else if(shape == "Spade" || shape == "Club") false
