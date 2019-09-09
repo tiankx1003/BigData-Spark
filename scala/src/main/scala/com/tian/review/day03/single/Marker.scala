@@ -1,4 +1,4 @@
-package com.tian.onclass.day03.single
+package com.tian.review.day03.single
 
 import scala.collection.mutable
 
@@ -6,18 +6,17 @@ import scala.collection.mutable
  * 工厂类
  *
  * @author tian
- *         2019/9/6 15:07
+ *         2019/9/9 18:30
  */
 object Marker {
     val markers = mutable.Map(
         "red" -> new Marker("red"),
         "blue" -> new Marker("blue"),
-        "yellow" -> new Marker("yellow"))
-
-    def getMarker(color: String) = {
+        "yellow" -> new Marker("yellow")
+    )
+    def getMarker(color:String) ={
         markers.getOrElseUpdate(color,new Marker(color))
     }
-
     def main(args: Array[String]): Unit = {
         println(Marker.getMarker("red"))
         println(Marker.getMarker("yellow"))
@@ -25,8 +24,7 @@ object Marker {
     }
 }
 
-class Marker private (val color: String) {//私有化主构造
+class Marker private (val color:String){ //私有化构造器
     println(s"$color marker")
-
     override def toString: String = s"$color"
 }

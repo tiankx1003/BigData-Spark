@@ -1,7 +1,8 @@
-package com.tian.onclass.day03.traitdemo.sub
+package com.tian.onclass.day03.traitdemo
 
 /**
  * 动态叠加(动态混入)
+ *
  * @author tian
  *         2019/9/6 16:28
  */

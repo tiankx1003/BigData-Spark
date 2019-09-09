@@ -1,4 +1,4 @@
-package com.tian.onclass.day03.traitdemo.sub
+package com.tian.onclass.day03.ext
 
 /**
  * 给类起别名

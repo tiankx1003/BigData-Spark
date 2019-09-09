@@ -4,7 +4,7 @@ package com.tian.onclass.day03.single
  * @author tian
  *         2019/9/6 14:15
  */
-// TODO 伴生对象视频
+
 /*
 java中不够面向对象的元素:基本类型、静态
 scala中通过对象object来实现静态的效果，同时解决了单例问题
