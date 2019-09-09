@@ -1,4 +1,4 @@
-package com.tian.onclass.day05.sort
+package com.tian.onclass.day05.onclass.sort
 
 /**
  * sortWith

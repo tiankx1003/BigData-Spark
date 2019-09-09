@@ -1,4 +1,4 @@
-package com.tian.onclass.day05.implicitdemo
+package com.tian.onclass.day05.onclass.implicitdemo
 
 /**
  * @author tian

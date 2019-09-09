@@ -1,4 +1,4 @@
-package com.tian.onclass.day05.pattern
+package com.tian.onclass.day05.onclass.pattern
 
 /**
  * @author tian
