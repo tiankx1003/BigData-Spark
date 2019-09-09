@@ -4,7 +4,7 @@ package com.tian.onclass.day05.onclass.pattern
  * @author tian
  *         2019/9/9 15:08
  */
-object PatterType {
+object PatternType {
     def main(args: Array[String]): Unit = {
         val s = List(1, 2, "a", "abc", "+", "-", false)
         //如果是数字，加一

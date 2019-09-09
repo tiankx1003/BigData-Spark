@@ -3,6 +3,8 @@ package com.tian.onclass.day05.onclass.pattern
 import scala.io.StdIn
 
 /**
+ * 模式匹配
+ *
  * @author tian
  *         2019/9/9 14:52
  */
