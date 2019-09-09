@@ -9,7 +9,7 @@ package com.tian.onclass.day05.onclass.sort
 object SortDemo2 {
     def main(args: Array[String]): Unit = {
         val list1 = List(10, 22, 43, 18, 29)
-        val list1asc = list1.sortBy(_)
+//        val list1asc = list1.sortBy(_)
         val list1desc = list1.sortBy(x => x)(Ordering.Int.reverse)
         val list2 = List("aa", "agaga", "aga", "s")
         println(list2.sortBy(_.length))

@@ -34,8 +34,8 @@ object TestDemo {
 
         //隐式类、隐式函数、隐式值的查找
         //先查找当前作用域，然后查找相关类型的伴生对象
-        implicit a:AA = null
-        fooD()
+        /*implicit a:AA = null
+        fooD()*/
 
     }
 

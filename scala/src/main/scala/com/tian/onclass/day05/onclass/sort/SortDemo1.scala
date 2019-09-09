@@ -38,16 +38,16 @@ object SortDemo1 {
         println(list2)
         //自定义类型
         val users1 = List(new User1(20, "lisid"), new User1(15, "wangwu"), new User(12, "wanger"))
-        println(users1.sorted)
+//        println(users1.sorted)
         val users = List(new User(20, "lisid"), new User(15, "wangwu"), new User(12, "wanger"))
         println(users(0) > users(1)) //实现Ordered可以直接使用> 和 < 比较
         println(users.sorted)
         //def sorted[B >: A](implicit ord: Ordering[B]): Repr
         list1.sorted(Ordering.Int) //升序，默认
         list1.sorted(Ordering.Int.reverse) //降序
-        println(users1.sorted(new Ordering[User2] {
+        /*println(users1.sorted(new Ordering[User2] {
             override def compare(x: User2, y: User2): Int = x.age - y.age
-        }.reverse)) //按照年龄属性比较，反向
+        }.reverse)) //按照年龄属性比较，反向*/
     }
 }
 
