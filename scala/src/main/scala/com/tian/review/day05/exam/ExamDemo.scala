@@ -17,6 +17,7 @@ object ExamDemo {
 
     /**
      * 1.对前面 wordcount 的结果, 按照单词的个数降序排列,如果个数相同按照单词的长度升序排列
+     * WordCount结果为一个map，使用toList转为Tuple类型的List
      *
      * @param list
      * @return
@@ -31,15 +32,10 @@ object ExamDemo {
      * @param arr
      * @return
      */
-    def swap(arr: Array[Int]): Array[Int] = {
-        if (arr.length < 2) return Array()
-        arr match {
-            case Array(a, b, c@_*) => {
-                arr(0) = b
-                arr(1) = a
-            }
-        }
-        arr
+    def swap(arr: Array[Int]): Array[Int] = arr match {
+        //case Array(a, b, rest@_*) => Array(b, a, rest: _*) //TODO 有问题
+        case Array(a, b, rest@_*) => Array(b, a) ++ rest
+        case _ => arr
     }
 
     /**
