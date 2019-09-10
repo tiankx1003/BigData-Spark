@@ -24,7 +24,7 @@ class Animal {
 }
 
 class Pet extends Animal {
-    override val name = "animal"
+    override val name = "pet"
 }
 
 class Dog extends Pet {

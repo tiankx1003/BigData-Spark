@@ -36,7 +36,7 @@ object GenericDemo5 {
         父类型的集合赋值给子类型的集合
          */
         val ea = new E[A]
-        val eb: E[B] = ea //协变
+        val eb: E[B] = ea //逆变
     }
 }
 

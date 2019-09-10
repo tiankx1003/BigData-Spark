@@ -58,7 +58,7 @@ object TypeDemo1 {
         println(some.get)
         println(some.getOrElse(100)) //防止空值
 
-        some match{ //使用模式匹配也能解决返回控制的问题
+        some match{ //使用模式匹配也能解决返回空值的问题
             case Some(a) => println(a)
             case None =>
         }

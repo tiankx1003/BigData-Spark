@@ -45,7 +45,7 @@ object PartitionFunDemo2 {
             println(a)
         }
 
-        //函数传参_后调用apply函数
+        //函数传递后，调用apply函数
         //        f1 _.apply(10) //语法错误
         (f1 _).apply(10)
         val f = f1 _
