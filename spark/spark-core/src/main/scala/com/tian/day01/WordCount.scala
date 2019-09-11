@@ -10,8 +10,7 @@ import org.apache.spark.{SparkConf, SparkContext}
  *         2019/9/11 16:46
  */
 object WordCount {
-    def main(args: Array[String]): Unit = {
-
+    def main(args: Array[String]): Unit = { //通过configuration传参
         //1.初始化spark context
         val conf = new SparkConf()
             .setAppName("WordCount")
