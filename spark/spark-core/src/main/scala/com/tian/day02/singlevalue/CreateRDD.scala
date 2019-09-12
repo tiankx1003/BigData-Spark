@@ -1,4 +1,4 @@
-package com.tian.day02
+package com.tian.day02.singlevalue
 
 import org.apache.spark.{SparkConf, SparkContext}
 

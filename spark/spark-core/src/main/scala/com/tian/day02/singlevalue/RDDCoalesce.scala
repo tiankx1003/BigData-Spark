@@ -1,4 +1,4 @@
-package com.tian.day02
+package com.tian.day02.singlevalue
 
 import org.apache.spark.{SparkConf, SparkContext}
 
@@ -22,7 +22,3 @@ object RDDCoalesce {
         sc.stop()
     }
 }
-/*
-一个父分出多个子就是宽依赖
-宽依赖必定shuffle
- */
