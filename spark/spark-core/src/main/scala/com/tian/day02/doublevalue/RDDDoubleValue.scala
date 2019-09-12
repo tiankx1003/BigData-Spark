@@ -26,8 +26,9 @@ object RDDDoubleValue {
         val rdd8 = rdd1.zip(rdd2)
         //和集合的高级算子zipWithIndex()相同，和自己的索引zip
         val rdd9 = rdd1.zipWithIndex()
-        //待研究
-        val fun = rdd1.zipPartitions(rdd2)
+        //只要求分区数相同
+        val rdd10 = rdd1.zipPartitions(rdd2)((it1, it2) => it1.zip(it2))
+        val rdd11 = rdd1.zipPartitions(rdd2)((it1, it2) => it1.zipAll(it2, 100, 200))
         sc.stop()
     }
 }
