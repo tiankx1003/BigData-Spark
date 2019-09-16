@@ -1,4 +1,4 @@
-package com.tian.day03
+package com.tian.day03.practice
 
 import org.apache.spark.{SparkConf, SparkContext}
 
@@ -24,7 +24,7 @@ object Practice1 {
     def main(args: Array[String]): Unit = {
         val conf = new SparkConf().setAppName("Practice").setMaster("local[2]")
         val sc = new SparkContext(conf)
-        val line = sc.textFile("E:\\Git\\BigData-Spark\\spark\\spark-core\\src\\main\\resources\\agent.log")
+        val line = sc.textFile("file://" + ClassLoader.getSystemResource("agent.log"))
         val rdd1 = line.map(line => {
             val words = line.split(" ")
             // RDD[((province, ads), 1)]

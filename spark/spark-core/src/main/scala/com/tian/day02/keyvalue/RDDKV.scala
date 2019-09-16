@@ -17,7 +17,7 @@ object RDDKV {
         println(sc.parallelize(List(10, 20, 30, 40)).groupBy(x => x).partitioner) //HashPartitioner
         //隐式转换
         //implicit def rddToPairRDDFunctions
-        //之前没有分区数才会使用传入的分区器，分区器传入分区数
+        //之前没有分区器才会使用传入的分区器，分区器传入分区数
         val rdd2 = rdd1.partitionBy(new HashPartitioner(3))
         rdd2.glom().collect.foreach(arr => println(arr.mkString(",")))
         //TODO 分区器 视频

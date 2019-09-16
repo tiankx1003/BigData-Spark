@@ -9,6 +9,6 @@ package com.tian.day02.singlevalue
  */
 object RDDPipe {
     def main(args: Array[String]): Unit = {
-
+        //TODO pipe使用命令行运行
     }
 }
