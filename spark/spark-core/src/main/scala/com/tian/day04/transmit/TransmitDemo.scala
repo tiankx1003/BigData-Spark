@@ -1,4 +1,4 @@
-package com.tian.day04.transmitfun
+package com.tian.day04.transmit
 
 import org.apache.spark.rdd.RDD
 import org.apache.spark.{SparkConf, SparkContext}
@@ -15,7 +15,7 @@ import org.apache.spark.{SparkConf, SparkContext}
 1. 方法或函数的传递，对象必须序列化
 2. 属性值的传递，对象序列化或使用局部变量传值
  */
-object TransmitFun {
+object TransmitDemo {
     def main(args: Array[String]): Unit = {
         val conf = new SparkConf()
             .setAppName("Practice")
@@ -26,7 +26,7 @@ object TransmitFun {
             .registerKryoClasses(Array(classOf[Searcher]))
         val sc = new SparkContext(conf)
         val rdd =
-            sc.parallelize(List("hadoop", "scala", "hello", "hello", "scala", "world", "hello", "scala"), 2)
+            sc.parallelize(Array("hello world", "hello tian", "tian", "tian"), 2)
         val searcher = new Searcher("hello") with Serializable //动态混入，仍旧不能解决问题
         val result = searcher.getMatchedRDD1(rdd)
         searcher.getMatchedRDD2(rdd) //对象没有序列化，query属性没有序列化
@@ -35,9 +35,12 @@ object TransmitFun {
     }
 }
 
-/*
-Serializable接口是标记接口，不需要实现任何方法
-java中的序列化过重，spark使用自己的序列化框架kryo
+/**
+ * 在 RDD 中查找出来包含 query 子字符串的元素
+ * Serializable接口是标记接口，不需要实现任何方法
+ * java中的序列化过重，spark使用自己的序列化框架kryo
+ *
+ * @param query
  */
 case class Searcher(val query: String) extends Serializable {
     def isMatch(s: String): Boolean = {
@@ -51,7 +54,7 @@ case class Searcher(val query: String) extends Serializable {
 
     def getMatchedRDD2(rdd: RDD[String]): RDD[String] = {
         rdd.filter(_.contains(query)) //query属性没有序列化
-        val q = query //传给局部变量
+        val q: String = query //传给局部变量
         rdd.filter(_.contains(q)) //对象是否序列和q没有关系
     }
 }
