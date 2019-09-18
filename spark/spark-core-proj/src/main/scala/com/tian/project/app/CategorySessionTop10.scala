@@ -37,12 +37,10 @@ object CategorySessionTop10 {
         result.foreach(println) //打印测试
     }
 
-
     def statCategoryTop10Session2(sc: SparkContext,
                                   userVisitActionRDD: RDD[UserVisitAction],
                                   top10CategoryCountInfo: List[CategoryCountInfo]): Unit = {
-        //TODO 有问题
-        /*val itRDD: RDD[(Long, Iterable[(String, Int)])] = userVisitActionRDD
+        val itRDD: RDD[(Long, Iterable[(String, Int)])] = userVisitActionRDD
             .filter(action => { // 把包含top10cid的用户点击记录过滤出来
                 top10CategoryCountInfo.map(_.categoryId).contains(action.click_category_id.toString)
             })
@@ -58,40 +56,13 @@ object CategorySessionTop10 {
             val result: Array[CategorySession] = onlyCidRDD.flatMap { //添加Iterable[(String, Int)]
                 case (_, it) => it
             }
-                .sortBy(-_._2, ascending = false)
-                .take(10)
-                .map {
-                    case (sid, count) => CategorySession(cid, sid, count)
-                }
-            // 写入外部存储 jdbc,hbase,hive
-            result.foreach(println) //打印测试*/
-        val filteredUserVisitActionRDD: RDD[UserVisitAction] = userVisitActionRDD.filter(action => {
-            top10CategoryCountInfo.map(_.categoryId).contains(action.click_category_id.toString)
-        })
-
-        val cidSidOneRDD = filteredUserVisitActionRDD.map(action => ((action.click_category_id, action.session_id), 1))
-
-        val cidSidCountItRDD: RDD[(Long, Iterable[(String, Int)])] = cidSidOneRDD
-            .reduceByKey(_ + _)
-            .map {
-                case ((cid, sid), count) => (cid, (sid, count))
-            }
-            .groupByKey
-
-        top10CategoryCountInfo.map(_.categoryId).foreach(cid => {
-            val onlyCidRDD: RDD[(Long, Iterable[(String, Int)])] = cidSidCountItRDD.filter(_._1.toString == cid)
-            val sidCountRDD: RDD[(String, Int)] = onlyCidRDD.flatMap {
-                case (_, it) => it
-            }
-            val result: Array[CategorySession] = sidCountRDD
                 .sortBy(_._2, ascending = false)
                 .take(10)
                 .map {
                     case (sid, count) => CategorySession(cid, sid, count)
                 }
-
-            // 写入外部存储: jdbc, hive, hbase...
-            result.foreach(println)
+            // 写入外部存储 jdbc,hbase,hive
+            result.foreach(println) //打印测试
         })
     }
 
@@ -119,7 +90,7 @@ object CategorySessionTop10 {
             })
             treeSet.toIterator
         })
-        resultRDD.collect.foreach(println)
+        resultRDD.collect.foreach(println) //打印测试
     }
 }
 

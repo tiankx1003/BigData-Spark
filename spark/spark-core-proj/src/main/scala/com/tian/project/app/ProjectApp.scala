@@ -45,9 +45,11 @@ object ProjectApp {
         val top10 = CategoryTop10App.statCategoryTop10(sc, userVisitActionRDD)
 
         // 需求2: top10品类中，每个品类的top10活跃session
-        CategorySessionTop10.statCategoryTop10Session3(sc: SparkContext, userVisitActionRDD, top10)
+        CategorySessionTop10.statCategoryTop10Session1(sc: SparkContext, userVisitActionRDD, top10)
         println("++++++++++++++++++++++++++++++++++++++++++++++++++++++++")
         CategorySessionTop10.statCategoryTop10Session2(sc: SparkContext, userVisitActionRDD, top10)
+        println("++++++++++++++++++++++++++++++++++++++++++++++++++++++++")
+        CategorySessionTop10.statCategoryTop10Session3(sc: SparkContext, userVisitActionRDD, top10)
         sc.stop()
     }
 }
