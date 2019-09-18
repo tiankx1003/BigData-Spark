@@ -10,6 +10,7 @@
     <version>1.0-SNAPSHOT</version>
     <modules>
         <module>spark-core</module>
+        <module>spark-core-proj</module>
     </modules>
     <dependencies>
         <dependency>
