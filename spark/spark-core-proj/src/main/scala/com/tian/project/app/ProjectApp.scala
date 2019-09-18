@@ -9,6 +9,9 @@ import org.apache.spark.{SparkConf, SparkContext}
  * @date 2019/9/18 11:34
  * @version 1.0.0
  */
+/*
+task个数设置为节点的2~3倍
+ */
 object ProjectApp {
     def main(args: Array[String]): Unit = {
         // 1.sc初始化
@@ -42,7 +45,9 @@ object ProjectApp {
         val top10 = CategoryTop10App.statCategoryTop10(sc, userVisitActionRDD)
 
         // 需求2: top10品类中，每个品类的top10活跃session
-        CategorySessionTop10.statCategoryTop10Session(sc: SparkContext, userVisitActionRDD, top10)
+        CategorySessionTop10.statCategoryTop10Session3(sc: SparkContext, userVisitActionRDD, top10)
+        println("++++++++++++++++++++++++++++++++++++++++++++++++++++++++")
+        CategorySessionTop10.statCategoryTop10Session2(sc: SparkContext, userVisitActionRDD, top10)
         sc.stop()
     }
 }

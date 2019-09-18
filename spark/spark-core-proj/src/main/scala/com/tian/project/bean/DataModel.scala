@@ -45,6 +45,12 @@ case class CategoryCountInfo(categoryId: String,
 
 case class CategorySession(categoryId: String,
                            sessionId: String,
-                           clickCount: Long)
+                           clickCount: Long) extends Ordered[CategorySession] {
+    override def compare(that: CategorySession): Int = {
+        // return that.clickCount - this.clickCount //导致重复的无法存入
+        if (that.clickCount >= this.clickCount) 1
+        else -1
+    }
+}
 
 
