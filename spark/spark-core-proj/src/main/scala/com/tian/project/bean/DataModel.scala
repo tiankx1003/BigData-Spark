@@ -43,3 +43,8 @@ case class CategoryCountInfo(categoryId: String,
                              orderCount: Long,
                              payCount: Long)
 
+case class CategorySession(categoryId: String,
+                           sessionId: String,
+                           clickCount: Long)
+
+
