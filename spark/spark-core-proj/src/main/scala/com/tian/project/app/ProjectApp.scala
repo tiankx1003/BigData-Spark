@@ -15,8 +15,7 @@ object ProjectApp {
         val conf: SparkConf = new SparkConf().setAppName("Practice").setMaster("local[2]")
         val sc: SparkContext = new SparkContext(conf)
         // 2.读取数据
-        //val lineRDD: RDD[String] = sc.textFile("file://" + ClassLoader.getSystemResource("user_visit_action.txt"))
-        val lineRDD = sc.textFile("spark-core-proj/src/main/resources/user_visit_action.txt")
+        val lineRDD: RDD[String] = sc.textFile(ClassLoader.getSystemResource("user_visit_action.txt").getPath)
         //lineRDD.collect.foreach(println) //输出验证
         //3 .封装到样例类
         val userVisitActionRDD: RDD[UserVisitAction] = lineRDD.map(line => {

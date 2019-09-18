@@ -15,11 +15,8 @@ object ReadWrite {
         val conf = new SparkConf().setAppName("Practice").setMaster("local[2]")
         val sc = new SparkContext(conf)
         //读取TextFile
-        val rdd1 = sc.textFile("file://" + ClassLoader.getSystemResource("read.txt"))
-        //E:\Git\BigData-Spark\spark\spark-core\src\main\resources\read.txt
-        val rdd2 = sc.textFile("spark-core/src/main/resources/read.txt")
+        val rdd1 = sc.textFile(ClassLoader.getSystemResource("read.txt").getPath)
         //写入TextFile到HDFS
-        rdd2.collect.foreach(println)
-//        rdd1.saveAsTextFile("hdfs://hadoop102:9000/SparkFile/read.txt")
+        rdd1.saveAsTextFile("hdfs://hadoop102:9000/SparkFile/read.txt")
     }
 }
