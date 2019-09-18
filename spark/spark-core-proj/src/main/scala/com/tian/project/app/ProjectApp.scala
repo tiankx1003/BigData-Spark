@@ -1,6 +1,6 @@
 package com.tian.project.app
 
-import com.tian.project.bean.UserVisitAction
+import com.tian.project.bean.{CategoryCountInfo, UserVisitAction}
 import org.apache.spark.rdd.RDD
 import org.apache.spark.{SparkConf, SparkContext}
 
@@ -15,6 +15,7 @@ object ProjectApp {
         val conf: SparkConf = new SparkConf().setAppName("Practice").setMaster("local[2]")
         val sc: SparkContext = new SparkContext(conf)
         // 2.读取数据
+        // TODO: file://" + ClassLoader.getSystemResource("file") 路径报错
         val lineRDD: RDD[String] = sc.textFile(ClassLoader.getSystemResource("user_visit_action.txt").getPath)
         //lineRDD.collect.foreach(println) //输出验证
         //3 .封装到样例类
@@ -38,9 +39,10 @@ object ProjectApp {
         // userVisitActionRDD.collect.foreach(println) //输出验证
 
         // 需求1: top10的热门品类
-        CategoryTop10App.statCategoryTop10(sc, userVisitActionRDD)
+        val top10 = CategoryTop10App.statCategoryTop10(sc, userVisitActionRDD)
 
-
+        // 需求2: top10品类中，每个品类的top10活跃session
+        CategorySessionTop10.statCategoryTop10Session(sc: SparkContext, userVisitActionRDD, top10)
         sc.stop()
     }
 }

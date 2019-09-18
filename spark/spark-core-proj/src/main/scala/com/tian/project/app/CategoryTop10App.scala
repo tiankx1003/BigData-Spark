@@ -33,9 +33,10 @@ object CategoryTop10App {
                 map.getOrElse((cid, "pay"), 0L)
             )
         }.toList
-        val top10 = categoryCountInfoList
-            .sortBy(info =>(-info.clickCount,-info.orderCount,-info.payCount)) //降序
+        val top10: List[CategoryCountInfo] = categoryCountInfoList
+            .sortBy(info => (-info.clickCount, -info.orderCount, -info.payCount)) //降序
             .take(10) //前十
-        println(top10) //打印测试
+        // println(top10) //打印测试
+        top10
     }
 }
