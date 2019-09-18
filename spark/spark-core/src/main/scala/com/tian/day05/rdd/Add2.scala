@@ -1,5 +1,6 @@
 package com.tian.day05.rdd
 
+import org.apache.spark.rdd.RDD
 import org.apache.spark.{SparkConf, SparkContext}
 
 /**
@@ -9,12 +10,12 @@ import org.apache.spark.{SparkConf, SparkContext}
  */
 object Add2 {
     def main(args: Array[String]): Unit = {
-        val conf = new SparkConf().setAppName("Practice").setMaster("local[2]")
-        val sc = new SparkContext(conf)
-        val rdd1 = sc.parallelize(Array(3, 6, 4, 8))
-        val acc = new MyAcc //自定义累加器
+        val conf: SparkConf = new SparkConf().setAppName("Practice").setMaster("local[2]")
+        val sc: SparkContext = new SparkContext(conf)
+        val rdd1: RDD[Int] = sc.parallelize(Array(3, 6, 4, 8))
+        val acc: MyAcc = new MyAcc //自定义累加器
         sc.register(acc) //向executor注册累加器
-        val result = rdd1.map(x => {
+        val result: RDD[(Int, Int)] = rdd1.map(x => {
             acc.add(1)
             (x, 1)
         })

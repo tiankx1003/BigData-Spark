@@ -14,7 +14,7 @@ object MyAcc {
 }
 
 class MyAcc extends AccumulatorV2[Long, Long] {
-    var sum = 0L //缓存中间值
+    var sum: Long = 0L //缓存中间值
     /**
      * 判断零值
      * 零值不一定是数字0，根据具体情况而定
@@ -30,7 +30,7 @@ class MyAcc extends AccumulatorV2[Long, Long] {
      * @return 返回一个累加器
      */
     override def copy(): AccumulatorV2[Long, Long] = {
-        val newAcc = new MyAcc
+        val newAcc: MyAcc = new MyAcc
         newAcc.sum = sum //把当前缓存的值赋值给新的acc
         newAcc
     }
@@ -51,7 +51,7 @@ class MyAcc extends AccumulatorV2[Long, Long] {
     /**
      * 合并合并累加器
      *
-     * @param other
+     * @param other 另一个累加器
      */
     override def merge(other: AccumulatorV2[Long, Long]): Unit = {
         //this.sum += other.asInstanceOf[MyAcc].sum
