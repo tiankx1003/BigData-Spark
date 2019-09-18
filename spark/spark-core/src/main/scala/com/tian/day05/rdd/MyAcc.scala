@@ -2,8 +2,6 @@ package com.tian.day05.rdd
 
 import org.apache.spark.util.AccumulatorV2
 
-import scala.tools.cmd.Spec.Accumulator
-
 /**
  * @author tian
  * @date 2019/9/18 9:20
