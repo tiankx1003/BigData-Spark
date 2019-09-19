@@ -12,9 +12,55 @@ import scala.collection.mutable
  * @version 1.0.0
  */
 object SessionTop10 {
-    def sessionTop10(sc: SparkContext,
-                     userActionRDD: RDD[UserVisitAction],
-                     categoryTop10List: List[CategoryCountInfo]) = {
+    def sessionTop10_1(sc: SparkContext,
+                       userActionRDD: RDD[UserVisitAction],
+                       categoryTop10List: List[CategoryCountInfo]) = {
+        val result = userActionRDD
+            .filter(action => {
+                categoryTop10List.map(_.categoryId).contains(action.click_category_id.toString)
+            })
+            .map(action => ((action.click_category_id, action.session_id), 1))
+            .reduceByKey(_ + _)
+            .map {
+                case ((cid, sid), count) => (cid, (sid, count))
+            }
+            .groupByKey()
+            .map {
+                case (cid, it) => (cid, it.toList.sortBy(-_._2).take(10))
+            }
+            .foreach(println)
+    }
+
+    def sessionTop10_2(sc: SparkContext,
+                       userActionRDD: RDD[UserVisitAction],
+                       categoryTop10List: List[CategoryCountInfo]) = {
+        categoryTop10List
+            .map(_.categoryId)
+            .foreach(cid => {
+                userActionRDD
+                    .filter(action => categoryTop10List.map(_.categoryId).contains(action.click_category_id.toString))
+                    .map(action => ((action.click_category_id, action.session_id), 1))
+                    .reduceByKey(_ + _)
+                    .map {
+                        case ((cid, sid), count) => (cid, (sid, count))
+                    }
+                    .groupByKey()
+                    .filter(_._1.toString == cid)
+                    .flatMap {
+                        case (_, it) => it
+                    }
+                    .sortBy(_._2, ascending = false)
+                    .take(10)
+                    .map {
+                        case (sid, count) => CategorySession(cid, sid, count)
+                    }
+                    .foreach(println)
+            })
+    }
+
+    def sessionTop10_3(sc: SparkContext,
+                       userActionRDD: RDD[UserVisitAction],
+                       categoryTop10List: List[CategoryCountInfo]) = {
         userActionRDD
             .filter(action =>
                 categoryTop10List

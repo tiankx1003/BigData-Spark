@@ -34,7 +34,7 @@ object MainApp {
             }
         }
         val categoryTop10List: List[CategoryCountInfo] = CategoryTop10.categoryTop10(sc, userActionRDD)
-        SessionTop10.sessionTop10(sc, userActionRDD, categoryTop10List)
+        SessionTop10.sessionTop10_2(sc, userActionRDD, categoryTop10List)
         println("++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++")
         sc.stop()
     }
