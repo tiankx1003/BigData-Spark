@@ -66,7 +66,6 @@ object CategorySessionTop10 {
         })
     }
 
-    //TODO 使用Set自动去重，视频
     def statCategoryTop10Session3(sc: SparkContext,
                                   userVisitActionRDD: RDD[UserVisitAction],
                                   top10CategoryCountInfo: List[CategoryCountInfo]): Unit = {
