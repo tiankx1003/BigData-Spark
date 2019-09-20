@@ -22,7 +22,7 @@ object DF2RDD {
         val rdd2 = df.rdd //df转rdd，rdd中存放的是Row
         rdd2.collect.foreach(println)
         rdd2.map(row => {
-            row.getString(0) //如果第一个元素更不是String，会报错
+            row.getString(0) //如果第一个元素类型不是String，会报错
         }).collect.foreach(println)
         spark.close()
     }
