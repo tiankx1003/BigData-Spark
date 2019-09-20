@@ -1,6 +1,6 @@
 package com.tian.project.app
 
-import com.tian.project.bean.{CategoryCountInfo, UserVisitAction}
+import com.tian.project.bean.UserVisitAction
 import org.apache.spark.rdd.RDD
 import org.apache.spark.{SparkConf, SparkContext}
 
@@ -40,16 +40,22 @@ object ProjectApp {
                 splits(12).toLong)
         })
         // userVisitActionRDD.collect.foreach(println) //输出验证
+/*
 
         // 需求1: top10的热门品类
         val top10 = CategoryTop10App.statCategoryTop10(sc, userVisitActionRDD)
 
         // 需求2: top10品类中，每个品类的top10活跃session
-        CategorySessionTop10.statCategoryTop10Session1(sc: SparkContext, userVisitActionRDD, top10)
+        CategorySessionTop10.statCategoryTop10Session1(sc, userVisitActionRDD, top10)
         println("++++++++++++++++++++++++++++++++++++++++++++++++++++++++")
-        CategorySessionTop10.statCategoryTop10Session2(sc: SparkContext, userVisitActionRDD, top10)
+        CategorySessionTop10.statCategoryTop10Session2(sc, userVisitActionRDD, top10)
         println("++++++++++++++++++++++++++++++++++++++++++++++++++++++++")
-        CategorySessionTop10.statCategoryTop10Session3(sc: SparkContext, userVisitActionRDD, top10)
+        CategorySessionTop10.statCategoryTop10Session3(sc, userVisitActionRDD, top10)
+*/
+
+        // 需求3: 页面单跳转化率
+        PageConversionApp.calcPageConversion(sc,userVisitActionRDD,"1,2,3,4,5,6,7")
+
         sc.stop()
     }
 }
