@@ -37,6 +37,6 @@ class MyAvg extends UserDefinedAggregateFunction {
     }
 
     override def evaluate(buffer: Row): Double =
-        if (buffer.getLong(1) != 0) (buffer.getDouble(0) / buffer.getLong(1)) //返回平均值
+        if (buffer.getLong(1) != 0) buffer.getDouble(0) / buffer.getLong(1) //返回平均值
         else 0D //个数为0
 }
