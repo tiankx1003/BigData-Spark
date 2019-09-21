@@ -1,4 +1,4 @@
-package com.tian.day02
+package com.tian.day02.jdbc
 
 import java.util.Properties
 

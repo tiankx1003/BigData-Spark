@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DataSourceManagerImpl" format="xml" multifile-model="true">
+    <data-source source="LOCAL" name="MySQL - @hadoop102" uuid="2e2d53f1-b397-4121-a6be-17e011236852">
+      <driver-ref>mysql.8</driver-ref>
+      <synchronize>true</synchronize>
+      <jdbc-driver>com.mysql.cj.jdbc.Driver</jdbc-driver>
+      <jdbc-url>jdbc:mysql://hadoop102:3306</jdbc-url>
+      <driver-properties>
+        <property name="autoReconnect" value="true" />
+        <property name="zeroDateTimeBehavior" value="CONVERT_TO_NULL" />
+        <property name="tinyInt1isBit" value="false" />
+        <property name="characterEncoding" value="utf8" />
+        <property name="characterSetResults" value="utf8" />
+        <property name="yearIsDateType" value="false" />
+      </driver-properties>
+    </data-source>
+    <data-source source="LOCAL" name="hadoop102" uuid="720fcc13-ebed-46c7-a9ce-03e92bcde9df">
+      <driver-ref>hive</driver-ref>
+      <synchronize>true</synchronize>
+      <jdbc-driver>org.apache.hive.jdbc.HiveDriver</jdbc-driver>
+      <jdbc-url>jdbc:hive2://hadoop102:10000</jdbc-url>
+    </data-source>
+  </component>
+</project>

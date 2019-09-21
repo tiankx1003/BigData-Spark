@@ -10,6 +10,7 @@
         <module name="sparksql" />
         <module name="sparkcoreproject" />
         <module name="sparkcore" />
+        <module name="sparksqlproj" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
