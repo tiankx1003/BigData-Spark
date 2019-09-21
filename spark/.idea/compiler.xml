@@ -9,8 +9,8 @@
         <module name="sparkcoreproj" />
         <module name="sparksql" />
         <module name="sparkcoreproject" />
-        <module name="sparkcore" />
         <module name="sparksqlproj" />
+        <module name="sparkcore" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
