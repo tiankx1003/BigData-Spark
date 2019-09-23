@@ -6,11 +6,12 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="sparkcoreproj" />
-        <module name="sparksql" />
         <module name="sparkcoreproject" />
-        <module name="sparksqlproj" />
+        <module name="sparkstreaming" />
         <module name="sparkcore" />
+        <module name="sparksql" />
+        <module name="sparksqlproj" />
+        <module name="sparkcoreproj" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
