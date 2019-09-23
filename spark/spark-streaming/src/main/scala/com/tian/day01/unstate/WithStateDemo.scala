@@ -5,6 +5,8 @@ import org.apache.spark.streaming.{Seconds, StreamingContext}
 import org.apache.spark.streaming.dstream.{DStream, ReceiverInputDStream}
 
 /**
+ * 带状态转换
+ *
  * @author tian
  * @date 2019/9/23 16:41
  * @version 1.0.0
