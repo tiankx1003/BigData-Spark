@@ -9,6 +9,9 @@ import org.apache.spark.streaming.{Seconds, StreamingContext}
 /**
  * Kafka数据源
  * 这种方法存在缺陷
+ * 如果该程序停掉后，kafka生产者仍在消费数据
+ * 程序重启后只能从当前时间节点对应的位置开始消费
+ * 无法完成从断点位置消费的需要
  *
  * @author tian
  * @date 2019/9/23 20:11
@@ -21,6 +24,7 @@ kafka-topics.sh --zookeeper hadoop102:2181 --create --replication-factor 3 --par
 kafka-console-producer.sh --broker-list hadoop102:9092 --topic first
  */
 object KafkaDStream1 {
+    // TODO: 运行验证
     def main(args: Array[String]): Unit = {
         val conf: SparkConf = new SparkConf().setMaster("local[*]").setAppName("Kafka1")
         val ssc: StreamingContext = new StreamingContext(conf, Seconds(3))
@@ -38,6 +42,5 @@ object KafkaDStream1 {
         ).print()
         ssc.start()
         ssc.awaitTermination()
-        // TODO: 当前进度
     }
 }
