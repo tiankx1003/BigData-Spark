@@ -5,6 +5,7 @@
       <w>dbtable</w>
       <w>hbase</w>
       <w>hdfs</w>
+      <w>netcat</w>
       <w>proj</w>
       <w>rddkv</w>
       <w>tian</w>
