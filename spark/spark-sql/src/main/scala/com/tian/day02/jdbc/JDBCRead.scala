@@ -17,14 +17,14 @@ object JDBCRead {
             .appName("JDBCRead")
             .getOrCreate()
         //通用读操作
-        val df = spark.read.format("jdbc")
+        val df1 = spark.read.format("jdbc")
             .option("url", "jdbc:mysql://hadoop102:3306/rdd")
             .option("user", "root")
             .option("password", "root")
             .option("dbtable", "user")
             .load()
-        df.show()
-        df.createTempView("user")
+        df1.show()
+        df1.createTempView("user")
         spark.sql("select * from user where id > 10").show(10)
         //专用读操作
         val props = new Properties()
