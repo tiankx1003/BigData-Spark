@@ -1,4 +1,4 @@
-package com.tian.day01.review.dataresource
+package com.tian.day01.dataresource
 
 import java.io.{BufferedReader, InputStreamReader}
 import java.net.Socket

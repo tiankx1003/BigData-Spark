@@ -1,4 +1,4 @@
-package com.tian.day01.review
+package com.tian.day01
 
 import org.apache.spark.SparkConf
 import org.apache.spark.streaming.dstream.{DStream, ReceiverInputDStream}

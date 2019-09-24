@@ -1,4 +1,4 @@
-package com.tian.day01.review.dataresource
+package com.tian.day01.dataresource
 
 import org.apache.spark.{SparkConf, SparkContext}
 import org.apache.spark.rdd.RDD

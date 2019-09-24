@@ -1,4 +1,4 @@
-package com.tian.day01.review.dataresource.kafka
+package com.tian.day01.dataresource.kafka
 
 import kafka.serializer.StringDecoder
 import org.apache.kafka.clients.consumer.ConsumerConfig

@@ -1,4 +1,4 @@
-package com.tian.day01.review.transform
+package com.tian.day01.transform
 
 import org.apache.spark.SparkConf
 import org.apache.spark.streaming.{Seconds, StreamingContext}
