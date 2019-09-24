@@ -1,13 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="e5de9bc4-8ff4-4248-a278-4859522efa9e" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/scala/com/tian/day01/SqlOpt.scala" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/scala/com/tian/day01/TypeOpt.scala" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/scala/com/tian/day01/UnTypeOpt.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/scala/com/tian/day01/UnTypeOpt.scala" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/scala/com/tian/day01/Window1.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/scala/com/tian/day01/Window1.scala" afterDir="false" />
-    </list>
+    <list default="true" id="e5de9bc4-8ff4-4248-a278-4859522efa9e" name="Default Changelist" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -182,7 +176,7 @@
       <updated>1569292587206</updated>
       <workItem from="1569292588418" duration="3669000" />
       <workItem from="1569305057658" duration="6334000" />
-      <workItem from="1569313446470" duration="4543000" />
+      <workItem from="1569313446470" duration="4936000" />
     </task>
     <task id="LOCAL-00001" summary="structured streaming socket &amp; file source">
       <created>1569307786287</created>
@@ -212,7 +206,14 @@
       <option name="project" value="LOCAL" />
       <updated>1569319320466</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="structured streaming opt">
+      <created>1569320653697</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1569320653697</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -237,6 +238,7 @@
     <MESSAGE value="structured streaming Kafka source" />
     <MESSAGE value="structured streaming rate source" />
     <MESSAGE value="structured streaming" />
-    <option name="LAST_COMMIT_MESSAGE" value="structured streaming" />
+    <MESSAGE value="structured streaming opt" />
+    <option name="LAST_COMMIT_MESSAGE" value="structured streaming opt" />
   </component>
 </project>

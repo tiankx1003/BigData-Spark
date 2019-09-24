@@ -8,7 +8,7 @@ import org.apache.spark.sql.execution.streaming.FileStreamSource.Timestamp
  * @date 2019/9/24 16:56
  * @version 1.0.0
  */
-object Window1 {
+object WordCountWindow {
     def main(args: Array[String]): Unit = {
         val spark: SparkSession = SparkSession
             .builder()
@@ -32,7 +32,8 @@ object Window1 {
             .groupBy(
                 window($"ts", "4 minutes", "2 minutes"), $"word"
             )
-            .count()
+            .count() //计数
+            .orderBy($"window") //按照窗口排序
         line.writeStream
             .format("console")
             .outputMode("update")
