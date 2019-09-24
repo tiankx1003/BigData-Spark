@@ -1,7 +1,7 @@
-package com.tian.day01
+package com.tian.day01.windowopt
 
-import org.apache.spark.sql.{DataFrame, SparkSession}
 import org.apache.spark.sql.execution.streaming.FileStreamSource.Timestamp
+import org.apache.spark.sql.{DataFrame, SparkSession}
 
 /**
  * @author tian

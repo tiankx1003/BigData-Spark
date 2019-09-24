@@ -15,6 +15,7 @@
         <module>spark-sql</module>
         <module>spark-sql-proj</module>
         <module>spark-streaming</module>
+        <module>structured-streaming</module>
     </modules>
     <dependencies>
         <dependency>
@@ -59,7 +60,7 @@
         </dependency>
         <dependency>
             <groupId>org.apache.spark</groupId>
-            <artifactId>spark-sql-kafka-0-10_2.12</artifactId>
+            <artifactId>spark-sql-kafka-0-10_2.11</artifactId>
             <version>2.4.3</version>
         </dependency>
 

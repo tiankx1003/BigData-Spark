@@ -1,4 +1,4 @@
-package com.tian.day01
+package com.tian.day01.source
 
 import org.apache.spark.sql.streaming.StreamingQuery
 import org.apache.spark.sql.{DataFrame, SparkSession}
@@ -33,6 +33,19 @@ object SocketSource {
             .format("console") //输出目的地
             .outputMode("update") //输出模式
             .start
+        /*
+        val wordCount = spark.sql(
+        """
+            |select
+            | *
+            |from w
+        """.stripMargin)
+        val result2: StreamingQuery = wordCount.writeStream
+            .format("console")
+            .outputMode("append")   // complete append update
+            .trigger(Trigger.ProcessingTime("2 seconds"))
+            .start
+        */
         result.awaitTermination()
         spark.stop()
     }

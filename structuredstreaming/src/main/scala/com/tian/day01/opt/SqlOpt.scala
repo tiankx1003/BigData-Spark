@@ -1,7 +1,7 @@
-package com.tian.day01
+package com.tian.day01.opt
 
-import org.apache.spark.sql.{DataFrame, SparkSession}
 import org.apache.spark.sql.types.{LongType, StringType, StructType}
+import org.apache.spark.sql.{DataFrame, SparkSession}
 
 /**
  * 直接执行sql

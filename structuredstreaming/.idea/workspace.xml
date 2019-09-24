@@ -1,7 +1,61 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="e5de9bc4-8ff4-4248-a278-4859522efa9e" name="Default Changelist" comment="" />
+    <list default="true" id="e5de9bc4-8ff4-4248-a278-4859522efa9e" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/../spark/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../spark/file/file1/user1.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../spark/file/file1/user2.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../spark/file/file1/user3.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../spark/file/file2/year=2019/month=09/user1.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../spark/file/file2/year=2019/month=09/user2.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../spark/file/file2/year=2019/month=09/user3.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../spark/file/file2/year=2019/month=10/user1.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../spark/file/file2/year=2019/month=10/user2.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../spark/file/file2/year=2019/month=10/user3.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../spark/file/file2/year=2020/month=11/user1.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../spark/file/file2/year=2020/month=11/user2.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../spark/file/file2/year=2020/month=11/user3.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../spark/file/json/people.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../spark/structured-streaming/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../spark/structured-streaming/src/main/resources/log4j.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../spark/structured-streaming/structuredstreaming.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.classpath" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.project" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.settings/org.eclipse.jdt.apt.core.prefs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.settings/org.eclipse.jdt.core.prefs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.settings/org.eclipse.m2e.core.prefs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/scala/com/tian/day01/opt/SqlOpt.scala" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/scala/com/tian/day01/opt/UnTypeOpt.scala" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/scala/com/tian/day01/review/opt/SqlOpt.scala" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/scala/com/tian/day01/review/opt/TypeOpt.scala" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/scala/com/tian/day01/review/opt/UnTypeOpt.scala" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/scala/com/tian/day01/review/source/FileSource.scala" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/scala/com/tian/day01/review/source/KafkaSource1.scala" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/scala/com/tian/day01/review/source/KafkaSource2.scala" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/scala/com/tian/day01/review/source/RateSource.scala" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/scala/com/tian/day01/review/source/SocketSource.scala" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/scala/com/tian/day01/review/windowopt/WordCountWindow.scala" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/scala/com/tian/day01/source/FileSource.scala" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/scala/com/tian/day01/source/KafkaSource1.scala" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/scala/com/tian/day01/source/KafkaSource2.scala" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/scala/com/tian/day01/source/RateSource.scala" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/scala/com/tian/day01/source/SocketSource.scala" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/scala/com/tian/day01/windowopt/WordCountWindow.scala" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vmlist.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../spark/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../spark/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../spark/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../spark/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/scala/com/tian/day01/FileSource.scala" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/scala/com/tian/day01/KafkaSource1.scala" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/scala/com/tian/day01/KafkaSource2.scala" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/scala/com/tian/day01/RateSource.scala" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/scala/com/tian/day01/SocketSource.scala" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/scala/com/tian/day01/SqlOpt.scala" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/scala/com/tian/day01/TypeOpt.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/scala/com/tian/day01/opt/TypeOpt.scala" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/scala/com/tian/day01/UnTypeOpt.scala" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/scala/com/tian/day01/WordCountWindow.scala" beforeDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -27,6 +81,13 @@
   </component>
   <component name="FavoritesManager">
     <favorites_list name="structuredstreaming" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Scala Object" />
+      </list>
+    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
@@ -58,7 +119,7 @@
     <property name="project.structure.last.edited" value="Project" />
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.0" />
-    <property name="settings.editor.selected.configurable" value="preferences.keymap" />
+    <property name="settings.editor.selected.configurable" value="editing.templates" />
     <property name="settings.editor.splitter.proportion" value="0.20151515" />
   </component>
   <component name="RecentsManager">
@@ -88,39 +149,13 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.RateSource">
-    <configuration name="FileSource" type="Application" factoryName="Application" temporary="true">
-      <option name="MAIN_CLASS_NAME" value="com.tian.structuredstreaming.day01.FileSource" />
+  <component name="RunManager" selected="Application.SqlOpt">
+    <configuration name="KafkaSource1" type="Application" factoryName="Application" temporary="true">
+      <option name="MAIN_CLASS_NAME" value="com.tian.day01.review.source.KafkaSource1" />
       <module name="structuredstreaming" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.tian.structuredstreaming.day01.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="FileSource2" type="Application" factoryName="Application" temporary="true">
-      <option name="MAIN_CLASS_NAME" value="com.tian.structuredstreaming.day01.FileSource2" />
-      <module name="structuredstreaming" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.tian.structuredstreaming.day01.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="KafkaSource" type="Application" factoryName="Application" temporary="true">
-      <option name="MAIN_CLASS_NAME" value="com.tian.day01.KafkaSource" />
-      <module name="structuredstreaming" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.tian.day01.*" />
+          <option name="PATTERN" value="com.tian.day01.review.source.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -129,11 +164,11 @@
       </method>
     </configuration>
     <configuration name="KafkaSource2" type="Application" factoryName="Application" temporary="true">
-      <option name="MAIN_CLASS_NAME" value="com.tian.day01.KafkaSource2" />
+      <option name="MAIN_CLASS_NAME" value="com.tian.day01.review.source.KafkaSource2" />
       <module name="structuredstreaming" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.tian.day01.*" />
+          <option name="PATTERN" value="com.tian.day01.review.source.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -141,12 +176,38 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="RateSource" type="Application" factoryName="Application" temporary="true">
-      <option name="MAIN_CLASS_NAME" value="com.tian.day01.RateSource" />
+    <configuration name="SqlOpt" type="Application" factoryName="Application" temporary="true">
+      <option name="MAIN_CLASS_NAME" value="com.tian.day01.review.opt.SqlOpt" />
       <module name="structuredstreaming" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.tian.day01.*" />
+          <option name="PATTERN" value="com.tian.day01.review.opt.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="TypeOpt" type="Application" factoryName="Application" temporary="true">
+      <option name="MAIN_CLASS_NAME" value="com.tian.day01.review.opt.TypeOpt" />
+      <module name="structuredstreaming" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.tian.day01.review.opt.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="UnTypeOpt" type="Application" factoryName="Application" temporary="true">
+      <option name="MAIN_CLASS_NAME" value="com.tian.day01.review.opt.UnTypeOpt" />
+      <module name="structuredstreaming" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.tian.day01.review.opt.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -156,11 +217,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.RateSource" />
+        <item itemvalue="Application.SqlOpt" />
+        <item itemvalue="Application.TypeOpt" />
+        <item itemvalue="Application.UnTypeOpt" />
         <item itemvalue="Application.KafkaSource2" />
-        <item itemvalue="Application.KafkaSource" />
-        <item itemvalue="Application.FileSource" />
-        <item itemvalue="Application.FileSource2" />
+        <item itemvalue="Application.KafkaSource1" />
       </list>
     </recent_temporary>
   </component>
@@ -176,7 +237,7 @@
       <updated>1569292587206</updated>
       <workItem from="1569292588418" duration="3669000" />
       <workItem from="1569305057658" duration="6334000" />
-      <workItem from="1569313446470" duration="4936000" />
+      <workItem from="1569313446470" duration="12918000" />
     </task>
     <task id="LOCAL-00001" summary="structured streaming socket &amp; file source">
       <created>1569307786287</created>
@@ -213,7 +274,14 @@
       <option name="project" value="LOCAL" />
       <updated>1569320653697</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="structured streaming wordcount window">
+      <created>1569321032313</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1569321032313</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -239,6 +307,7 @@
     <MESSAGE value="structured streaming rate source" />
     <MESSAGE value="structured streaming" />
     <MESSAGE value="structured streaming opt" />
-    <option name="LAST_COMMIT_MESSAGE" value="structured streaming opt" />
+    <MESSAGE value="structured streaming wordcount window" />
+    <option name="LAST_COMMIT_MESSAGE" value="structured streaming wordcount window" />
   </component>
 </project>

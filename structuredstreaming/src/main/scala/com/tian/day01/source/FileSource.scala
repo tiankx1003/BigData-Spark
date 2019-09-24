@@ -1,8 +1,8 @@
-package com.tian.day01
+package com.tian.day01.source
 
-import org.apache.spark.sql.{DataFrame, SparkSession}
 import org.apache.spark.sql.streaming.Trigger
 import org.apache.spark.sql.types.{IntegerType, StringType, StructField, StructType}
+import org.apache.spark.sql.{DataFrame, SparkSession}
 
 /**
  * @author tian
