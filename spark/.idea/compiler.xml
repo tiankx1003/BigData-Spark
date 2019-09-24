@@ -21,6 +21,7 @@
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
+      <module name="structuredstreaming" target="1.5" />
       <module name="testpath" target="1.5" />
     </bytecodeTargetLevel>
   </component>

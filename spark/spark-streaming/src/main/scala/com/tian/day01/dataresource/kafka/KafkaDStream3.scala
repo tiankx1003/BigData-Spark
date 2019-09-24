@@ -50,8 +50,8 @@ object KafkaDStream3 {
             val hasOffsetRanges = rdd.asInstanceOf[HasOffsetRanges]
             val ranges = hasOffsetRanges.offsetRanges
             ranges.foreach(rang => { //每个分区遍历一次
-                val offset = rang.untilOffset
-                map += rang.topicAndPartition() -> topic
+                val offset: Long = rang.untilOffset
+                map += rang.topicAndPartition() -> offset
             })
             kafkaCluster.setConsumerOffsets(group, map)
         })

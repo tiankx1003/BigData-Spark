@@ -18,7 +18,7 @@ import org.apache.spark.streaming.{Seconds, StreamingContext}
 object KafkaDStream2 {
     // TODO: 验证
     def main(args: Array[String]): Unit = {
-        val ssc = StreamingContext.getActiveOrCreate(".ck1", createSsc)
+        val ssc = StreamingContext.getActiveOrCreate("./ck1", createSsc)
         ssc.start()
         ssc.awaitTermination()
     }
@@ -27,7 +27,7 @@ object KafkaDStream2 {
         println("isFlag") //只会再第一次时执行
         val conf = new SparkConf().setMaster("local[2]").setAppName("wordcount")
         val ssc = new StreamingContext(conf, Seconds(4))
-        ssc.checkpoint(".ck1")
+        ssc.checkpoint("./ck1")
         val brokers = "hadoop102:9092,hadoop103:9092,hadoop104:9092"
         val topic = "first"
         val group = "bigdata"
