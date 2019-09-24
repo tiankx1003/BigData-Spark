@@ -1,4 +1,4 @@
-package com.tian.structuredstreaming.day01
+package com.tian.day01
 
 import org.apache.spark.sql.streaming.StreamingQuery
 import org.apache.spark.sql.{DataFrame, SparkSession}
@@ -11,7 +11,7 @@ import org.apache.spark.sql.{DataFrame, SparkSession}
  * @date 2019/9/24 10:40
  * @version 1.0.0
  */
-object WordCount {
+object SocketSource {
     def main(args: Array[String]): Unit = {
         val spark: SparkSession = SparkSession
             .builder()

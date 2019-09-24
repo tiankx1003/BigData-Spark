@@ -2,40 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e5de9bc4-8ff4-4248-a278-4859522efa9e" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/../spark/spark-streaming/src/main/scala/com/tian/day02/window/Window1.scala" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../spark/spark-streaming/src/main/scala/com/tian/day02/window/Window2.scala" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/$PRODUCT_WORKSPACE_FILE$" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/codeStyles/Project.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/codeStyles/codeStyleConfig.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/dictionaries/tian.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/file1/user1.csv" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/file1/user2.csv" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/file1/user3.csv" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/file2/year=2019/month=09/user1.csv" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/file2/year=2019/month=09/user2.csv" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/file2/year=2019/month=09/user3.csv" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/file2/year=2019/month=10/user1.csv" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/file2/year=2019/month=10/user2.csv" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/file2/year=2019/month=10/user3.csv" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/file2/year=2020/month=11/user1.csv" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/file2/year=2020/month=11/user2.csv" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/file2/year=2020/month=11/user3.csv" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/log4j.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/scala/com/tian/structuredstreaming/day01/FileSource.scala" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/scala/com/tian/structuredstreaming/day01/WordCount.scala" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/structuredstreaming.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/scala/com/tian/day01/KafkaSource1.scala" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/scala/com/tian/day01/KafkaSource2.scala" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../spark/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../spark/.idea/compiler.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../spark/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../spark/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../spark/.idea/scala_compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../spark/.idea/scala_compiler.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../spark/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../spark/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../spark/spark-streaming/src/main/scala/com/tian/day01/dataresource/kafka/KafkaDStream2.scala" beforeDir="false" afterPath="$PROJECT_DIR$/../spark/spark-streaming/src/main/scala/com/tian/day01/dataresource/kafka/KafkaDStream2.scala" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../spark/spark-streaming/src/main/scala/com/tian/day01/dataresource/kafka/KafkaDStream3.scala" beforeDir="false" afterPath="$PROJECT_DIR$/../spark/spark-streaming/src/main/scala/com/tian/day01/dataresource/kafka/KafkaDStream3.scala" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../spark/spark-streaming/src/main/scala/com/tian/day01/transform/WithStateTransform.scala" beforeDir="false" afterPath="$PROJECT_DIR$/../spark/spark-streaming/src/main/scala/com/tian/day01/transform/WithStateTransform.scala" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/scala/com/tian/structuredstreaming/day01/FileSource.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/scala/com/tian/day01/FileSource.scala" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/scala/com/tian/structuredstreaming/day01/WordCount.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/scala/com/tian/day01/SocketSource.scala" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -105,7 +78,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.FileSource2">
+  <component name="RunManager" selected="Application.KafkaSource2">
     <configuration name="FileSource" type="Application" factoryName="Application" temporary="true">
       <option name="MAIN_CLASS_NAME" value="com.tian.structuredstreaming.day01.FileSource" />
       <module name="structuredstreaming" />
@@ -132,6 +105,32 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="KafkaSource" type="Application" factoryName="Application" temporary="true">
+      <option name="MAIN_CLASS_NAME" value="com.tian.day01.KafkaSource" />
+      <module name="structuredstreaming" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.tian.day01.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="KafkaSource2" type="Application" factoryName="Application" temporary="true">
+      <option name="MAIN_CLASS_NAME" value="com.tian.day01.KafkaSource2" />
+      <module name="structuredstreaming" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.tian.day01.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="WordCount1" type="Application" factoryName="Application" temporary="true">
       <option name="MAIN_CLASS_NAME" value="com.tian.structuredstreaming.day01.WordCount1" />
       <module name="structuredstreaming" />
@@ -147,8 +146,10 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.FileSource2" />
+        <item itemvalue="Application.KafkaSource2" />
+        <item itemvalue="Application.KafkaSource" />
         <item itemvalue="Application.FileSource" />
+        <item itemvalue="Application.FileSource2" />
         <item itemvalue="Application.WordCount1" />
       </list>
     </recent_temporary>
@@ -164,8 +165,16 @@
       <option name="presentableId" value="Default" />
       <updated>1569292587206</updated>
       <workItem from="1569292588418" duration="3669000" />
-      <workItem from="1569305057658" duration="2682000" />
+      <workItem from="1569305057658" duration="5280000" />
     </task>
+    <task id="LOCAL-00001" summary="structured streaming socket &amp; file source">
+      <created>1569307786287</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1569307786287</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -186,5 +195,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+    <MESSAGE value="structured streaming socket &amp; file source" />
+    <option name="LAST_COMMIT_MESSAGE" value="structured streaming socket &amp; file source" />
   </component>
 </project>

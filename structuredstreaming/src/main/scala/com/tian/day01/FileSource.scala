@@ -1,4 +1,4 @@
-package com.tian.structuredstreaming.day01
+package com.tian.day01
 
 import org.apache.spark.sql.{DataFrame, SparkSession}
 import org.apache.spark.sql.streaming.Trigger
@@ -27,10 +27,10 @@ object FileSource {
             .format("csv")
             .schema(userSchema)
             .load("file1") //必须是目录，不能时文件名
-        val df2 = spark.readStream //读取自动分区的文件夹内的文件
+        val df2: DataFrame = spark.readStream //读取自动分区的文件夹内的文件
             .schema(userSchema)
             .csv("file2") //另一种获取DF的方式
-        //.groupBy("sex").sum("age") //聚合操作
+            .groupBy("sex").sum("age") //聚合操作
         //df1
         df2
             .writeStream
