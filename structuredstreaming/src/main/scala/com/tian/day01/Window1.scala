@@ -22,7 +22,7 @@ object Window1 {
             .format("socket")
             .option("host", "hadoop102")
             .option("port", 9999)
-            .option("includeTimestamp", true)
+            .option("includeTimestamp", value = true)
             .load
             .as[(String, Timestamp)]
             .flatMap {
