@@ -2,13 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e5de9bc4-8ff4-4248-a278-4859522efa9e" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/scala/com/tian/day01/KafkaSource1.scala" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/scala/com/tian/day01/KafkaSource2.scala" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../spark/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../spark/.idea/compiler.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/scala/com/tian/day01/RateSource.scala" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/scala/com/tian/structuredstreaming/day01/FileSource.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/scala/com/tian/day01/FileSource.scala" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/scala/com/tian/structuredstreaming/day01/WordCount.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/scala/com/tian/day01/SocketSource.scala" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -78,7 +73,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.KafkaSource2">
+  <component name="RunManager" selected="Application.RateSource">
     <configuration name="FileSource" type="Application" factoryName="Application" temporary="true">
       <option name="MAIN_CLASS_NAME" value="com.tian.structuredstreaming.day01.FileSource" />
       <module name="structuredstreaming" />
@@ -131,12 +126,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="WordCount1" type="Application" factoryName="Application" temporary="true">
-      <option name="MAIN_CLASS_NAME" value="com.tian.structuredstreaming.day01.WordCount1" />
+    <configuration name="RateSource" type="Application" factoryName="Application" temporary="true">
+      <option name="MAIN_CLASS_NAME" value="com.tian.day01.RateSource" />
       <module name="structuredstreaming" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.tian.structuredstreaming.day01.*" />
+          <option name="PATTERN" value="com.tian.day01.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -146,11 +141,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.RateSource" />
         <item itemvalue="Application.KafkaSource2" />
         <item itemvalue="Application.KafkaSource" />
         <item itemvalue="Application.FileSource" />
         <item itemvalue="Application.FileSource2" />
-        <item itemvalue="Application.WordCount1" />
       </list>
     </recent_temporary>
   </component>
@@ -165,7 +160,7 @@
       <option name="presentableId" value="Default" />
       <updated>1569292587206</updated>
       <workItem from="1569292588418" duration="3669000" />
-      <workItem from="1569305057658" duration="5280000" />
+      <workItem from="1569305057658" duration="6334000" />
     </task>
     <task id="LOCAL-00001" summary="structured streaming socket &amp; file source">
       <created>1569307786287</created>
@@ -174,7 +169,14 @@
       <option name="project" value="LOCAL" />
       <updated>1569307786287</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="structured streaming Kafka source">
+      <created>1569310734455</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1569310734455</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -196,6 +198,7 @@
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <MESSAGE value="structured streaming socket &amp; file source" />
-    <option name="LAST_COMMIT_MESSAGE" value="structured streaming socket &amp; file source" />
+    <MESSAGE value="structured streaming Kafka source" />
+    <option name="LAST_COMMIT_MESSAGE" value="structured streaming Kafka source" />
   </component>
 </project>
