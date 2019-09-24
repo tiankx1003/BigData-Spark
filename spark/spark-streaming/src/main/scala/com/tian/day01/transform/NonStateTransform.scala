@@ -1,6 +1,7 @@
 package com.tian.day01.transform
 
 import org.apache.spark.SparkConf
+import org.apache.spark.streaming.dstream.{DStream, ReceiverInputDStream}
 import org.apache.spark.streaming.{Seconds, StreamingContext}
 
 /**
@@ -12,10 +13,10 @@ import org.apache.spark.streaming.{Seconds, StreamingContext}
  */
 object NonStateTransform {
     def main(args: Array[String]): Unit = {
-        val conf = new SparkConf().setMaster("local[2]").setAppName("NonStateTransform")
-        val ssc = new StreamingContext(conf, Seconds(3))
-        val socketSteam = ssc.socketTextStream("hadoop02", 9999)
-        val resultDStream =
+        val conf: SparkConf = new SparkConf().setMaster("local[2]").setAppName("NonStateTransform")
+        val ssc: StreamingContext = new StreamingContext(conf, Seconds(3))
+        val socketSteam: ReceiverInputDStream[String] = ssc.socketTextStream("hadoop02", 9999)
+        val resultDStream: DStream[(String, Int)] =
             socketSteam.transform(_.flatMap(_.split(" ")).map((_, 1)).reduceByKey(_ + _))
         resultDStream.print
         ssc.start()
