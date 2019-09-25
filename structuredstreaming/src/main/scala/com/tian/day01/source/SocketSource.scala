@@ -1,52 +1,64 @@
 package com.tian.day01.source
 
-import org.apache.spark.sql.streaming.StreamingQuery
+import org.apache.spark.sql.streaming.Trigger
 import org.apache.spark.sql.{DataFrame, SparkSession}
 
 /**
- * 案例
- * socket source数据源
- *
  * @author tian
- * @date 2019/9/24 10:40
+ * @date 2019/9/24 18:37
  * @version 1.0.0
  */
 object SocketSource {
     def main(args: Array[String]): Unit = {
         val spark: SparkSession = SparkSession
             .builder()
-            .master("local[*]")
-            .appName("WordCount1")
+            .master("local[2]")
+            .appName("SocketSource")
             .getOrCreate()
-        import spark.implicits._
-        val lines: DataFrame = spark.readStream //输入表
-            .format("socket") //socket source，生产环境中很少使用，主要用于测试
+        val lines: DataFrame = spark //输入表
+            .readStream
+            .format("socket") //source类型
             .option("host", "hadoop102")
-            .option("port", 9999)
+            .option("port", "9999")
             .load
-        val df: DataFrame = lines.as[String]
-            .flatMap(_.split(" "))
+        import spark.implicits._
+        val df = lines
+            .as[String]
+            .flatMap(_.split("\\W+"))
             .map((_, 1))
-            .groupBy("value")
-            .count()
-        val result: StreamingQuery = df.writeStream //输出表
+            .groupBy() // TODO: 有问题待解决 groupBy("value")???
+            .count
+        lines
+            .as[String]
+            .flatMap(_.split((" ")))
+            .createOrReplaceTempView("w")
+        val wordcount = spark.sql(
+            """
+              |select value word, count(1) count
+              |from w
+              |group by value
+              |""".stripMargin)
+        df
+//        wordcount
+            .writeStream //输出表
             .format("console") //输出目的地
             .outputMode("update") //输出模式
-            .start
-        /*
-        val wordCount = spark.sql(
-        """
-            |select
-            | *
-            |from w
-        """.stripMargin)
-        val result2: StreamingQuery = wordCount.writeStream
-            .format("console")
-            .outputMode("append")   // complete append update
             .trigger(Trigger.ProcessingTime("2 seconds"))
             .start
-        */
-        result.awaitTermination()
+            .awaitTermination()
         spark.stop()
     }
 }
+
+/*
+socket source在生产环境中很少使用，主要用于测试
+输出模式:
+complete
+    全部输出，必须有聚合
+append
+    追加模式，只有输出那些将来永远不可能再更新的数据
+    没有聚合的时候，append和update一致
+    有聚合的时候，一定要有水印才能使用append
+update
+    只输出变化的部分
+ */

@@ -1,11 +1,11 @@
 package com.tian.day01.windowopt
 
+import org.apache.spark.sql.SparkSession
 import org.apache.spark.sql.execution.streaming.FileStreamSource.Timestamp
-import org.apache.spark.sql.{DataFrame, SparkSession}
 
 /**
  * @author tian
- * @date 2019/9/24 16:56
+ * @date 2019/9/24 18:40
  * @version 1.0.0
  */
 object WordCountWindow {
@@ -13,32 +13,30 @@ object WordCountWindow {
         val spark: SparkSession = SparkSession
             .builder()
             .master("local[2]")
-            .appName("Window1")
+            .appName("WordCountWindow")
             .getOrCreate()
         import spark.implicits._
-        //导入spark提供的全局的函数
         import org.apache.spark.sql.functions._
-        val line: DataFrame = spark.readStream
+        val line = spark.readStream
             .format("socket")
             .option("host", "hadoop102")
             .option("port", 9999)
-            .option("includeTimestamp", value = true)
+            .option("includeTimeStamp", value = true)
             .load
             .as[(String, Timestamp)]
             .flatMap {
-                case (words, ts) => words.split("\\W+").map((_, ts))
+                case (word, ts) => word.split("\\W+").map((_, ts))
             }
             .toDF("word", "ts")
             .groupBy(
                 window($"ts", "4 minutes", "2 minutes"), $"word"
             )
-            .count() //计数
-            .orderBy($"window") //按照窗口排序
+            .count
+            .orderBy($"window")
         line.writeStream
             .format("console")
             .outputMode("update")
             .start()
             .awaitTermination()
-        // TODO: 视频
     }
 }

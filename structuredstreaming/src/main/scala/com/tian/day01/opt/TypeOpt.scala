@@ -1,13 +1,14 @@
 package com.tian.day01.opt
 
-import org.apache.spark.sql.types.{LongType, StringType, StructType}
-import org.apache.spark.sql.{Dataset, SparkSession}
+import com.tian.day01.opt.People
+import org.apache.spark.sql.SparkSession
+import org.apache.spark.sql.types.{LongType, StringType, StructField, StructType}
 
 /**
- * 强类型API
+ * 强类型操作API
  *
  * @author tian
- * @date 2019/9/24 18:18
+ * @date 2019/9/24 18:40
  * @version 1.0.0
  */
 object TypeOpt {
@@ -15,17 +16,22 @@ object TypeOpt {
         val spark: SparkSession = SparkSession
             .builder()
             .master("local[2]")
-            .appName("UnTypeOpt")
+            .appName("TypeOpt")
             .getOrCreate()
-        val peopleSchema = new StructType()
-            .add("name", StringType)
-            .add("age", LongType)
-            .add("sex", StringType)
+        val peopleSchema = StructType(
+            StructField("name", StringType)
+                :: StructField("age", LongType)
+                :: StructField("sex", StringType)
+                :: Nil
+        )
         val peopleDF = spark.readStream
             .schema(peopleSchema)
-            .json("file/json") //等价于 .format("json").load(path)
+            .json("file/json")
         import spark.implicits._
-        val ds: Dataset[String] = peopleDF.as[People].filter(_.age > 20).map(_.name) //强类型API
+        val ds = peopleDF
+            .as[People]
+            .filter(_.age > 20)
+            .map(_.name)
         ds.writeStream
             .outputMode("update")
             .format("console")
@@ -33,5 +39,3 @@ object TypeOpt {
             .awaitTermination()
     }
 }
-
-case class People(name: String, age: Long, sex: String)

@@ -1,13 +1,11 @@
 package com.tian.day01.opt
 
-import org.apache.spark.sql.types.{LongType, StringType, StructType}
-import org.apache.spark.sql.{DataFrame, SparkSession}
+import org.apache.spark.sql.SparkSession
+import org.apache.spark.sql.types.{LongType, StringType, StructField, StructType}
 
 /**
- * 直接执行sql
- *
  * @author tian
- * @date 2019/9/24 18:17
+ * @date 2019/9/24 21:25
  * @version 1.0.0
  */
 object SqlOpt {
@@ -15,21 +13,29 @@ object SqlOpt {
         val spark: SparkSession = SparkSession
             .builder()
             .master("local[2]")
-            .appName("UnTypeOpt")
+            .appName("SqlOpt")
             .getOrCreate()
-        val peopleSchema = new StructType()
-            .add("name", StringType)
-            .add("age", LongType)
-            .add("sex", StringType)
+        val peopleSchema = StructType(
+            StructField("name", StringType)
+                :: StructField("age", LongType)
+                :: StructField("sex", StringType)
+                :: Nil
+        )
         val peopleDF = spark.readStream
             .schema(peopleSchema)
-            .json("file/json") //等价于 .format("json").load(path)
+            .json("file/json")
         peopleDF.createOrReplaceTempView("people")
-        val df: DataFrame = spark.sql("select * from people")
+        val df = spark.sql(
+            """
+              |select sum(age)
+              |from people
+              |where age > 15
+              |""".stripMargin)
         df.writeStream
             .outputMode("update")
             .format("console")
             .start
             .awaitTermination()
+        spark.stop()
     }
 }
