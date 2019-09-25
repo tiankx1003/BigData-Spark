@@ -1,6 +1,5 @@
 package com.tian.day01.opt
 
-import com.tian.day01.opt.People
 import org.apache.spark.sql.SparkSession
 import org.apache.spark.sql.types.{LongType, StringType, StructField, StructType}
 
@@ -39,3 +38,5 @@ object TypeOpt {
             .awaitTermination()
     }
 }
+
+case class People(val name: String, val age: Long, val sex: String)
