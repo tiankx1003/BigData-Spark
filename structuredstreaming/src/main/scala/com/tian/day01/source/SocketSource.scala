@@ -22,27 +22,28 @@ object SocketSource {
             .option("port", "9999")
             .load
         import spark.implicits._
-        val df = lines
+        val df: DataFrame = lines
             .as[String]
             .flatMap(_.split("\\W+"))
             .map((_, 1))
-            .groupBy() // TODO: 有问题待解决 groupBy("value")???
+            .groupBy("value")
             .count
         lines
             .as[String]
             .flatMap(_.split((" ")))
             .createOrReplaceTempView("w")
-        val wordcount = spark.sql(
+        //sql的写法
+        val wordcount: DataFrame = spark.sql(
             """
               |select value word, count(1) count
               |from w
               |group by value
               |""".stripMargin)
+        //wordcount
         df
-//        wordcount
             .writeStream //输出表
             .format("console") //输出目的地
-            .outputMode("update") //输出模式
+            .outputMode("complete") //输出模式
             .trigger(Trigger.ProcessingTime("2 seconds"))
             .start
             .awaitTermination()
