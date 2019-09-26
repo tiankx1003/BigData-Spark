@@ -2,25 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e5de9bc4-8ff4-4248-a278-4859522efa9e" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/scala/com/tian/day02/UnSupportDemo.scala" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/scala/com/tian/day02/duplicate/DropDuplicate.scala" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/scala/com/tian/day02/joint/StreamStreamJoin.scala" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/scala/com/tian/day02/joint/StreamingStaticInner.scala" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/scala/com/tian/day02/joint/StreamingStaticOuter.scala" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/scala/com/tian/day02/sink/FileSink.scala" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/scala/com/tian/day02/watermark/Watermark.scala" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/scala/com/tian/day02/window/Window1.scala" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/scala/com/tian/day02/window/Window2.scala" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../spark/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../spark/.idea/compiler.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../spark/.idea/modules.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../spark/structured-streaming/pom.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../spark/structured-streaming/src/main/resources/log4j.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../spark/structured-streaming/structuredstreaming.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dictionaries/tian.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dictionaries/tian.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/log4j.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/log4j.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/scala/com/tian/day01/opt/TypeOpt.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/scala/com/tian/day01/opt/TypeOpt.scala" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/scala/com/tian/day01/windowopt/WordCountWindow.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/scala/com/tian/day01/windowopt/Window1.scala" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -59,6 +42,11 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
   </component>
   <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="userSettingsFile" value="C:\Developing\apache-maven-3.5.3\conf\settings.xml" />
+      </MavenGeneralSettings>
+    </option>
     <option name="importingSettings">
       <MavenImportingSettings>
         <option name="importAutomatically" value="true" />
@@ -79,14 +67,14 @@
     <property name="ToolWindowBean Validation.ShowToolbar" value="false" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/file1" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="project.structure.last.edited" value="Project" />
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.0" />
     <property name="restartRequiresConfirmation" value="false" />
-    <property name="settings.editor.selected.configurable" value="editor.preferences.import" />
+    <property name="settings.editor.selected.configurable" value="MavenSettings" />
     <property name="settings.editor.splitter.proportion" value="0.20151515" />
   </component>
   <component name="RecentsManager">
@@ -215,6 +203,8 @@
       <workItem from="1569401287493" duration="612000" />
       <workItem from="1569406119832" duration="1057000" />
       <workItem from="1569407197602" duration="7475000" />
+      <workItem from="1569428522992" duration="140000" />
+      <workItem from="1569428686513" duration="757000" />
     </task>
     <task id="LOCAL-00001" summary="structured streaming socket &amp; file source">
       <created>1569307786287</created>
