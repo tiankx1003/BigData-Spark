@@ -15,7 +15,6 @@
         <module>spark-sql</module>
         <module>spark-sql-proj</module>
         <module>spark-streaming</module>
-        <module>structured-streaming</module>
     </modules>
     <dependencies>
         <dependency>
