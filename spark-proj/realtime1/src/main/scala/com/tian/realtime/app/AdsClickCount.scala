@@ -3,7 +3,7 @@ package com.tian.realtime.app
 import com.tian.realtime.bean.AdsInfo
 import com.tian.realtime.util.RedisUtil
 import org.apache.spark.sql.streaming.Trigger
-import org.apache.spark.sql.{Dataset, SparkSession}
+import org.apache.spark.sql.{DataFrame, Dataset, SparkSession}
 import redis.clients.jedis.Jedis
 
 /**
@@ -12,8 +12,8 @@ import redis.clients.jedis.Jedis
  * @version 1.0.0
  */
 object AdsClickCount {
-    def statClickCount(spark: SparkSession, filteredAdsInfoDS: Dataset[AdsInfo]) = {
-        val resultDF = filteredAdsInfoDS
+    def statClickCount(spark: SparkSession, filteredAdsInfoDS: Dataset[AdsInfo]): Unit = {
+        val resultDF: DataFrame = filteredAdsInfoDS
             .groupBy("dayString", "area", "city", "adsId")
             .count()
         resultDF
@@ -23,14 +23,14 @@ object AdsClickCount {
                 df.persist()
                 if (df.count() > 0) {
                     df.foreachPartition(rowIt => {
-                        val client = RedisUtil.getJedisClient
-                        var dayString = ""
-                        val hashValue = rowIt.map(row => {
+                        val client: Jedis = RedisUtil.getJedisClient
+                        var dayString: String = ""
+                        val hashValue: Map[String, String] = rowIt.map(row => {
                             dayString = row.getString(0)
-                            val area = row.getString(1)
-                            val city = row.getString(2)
-                            val adsId = row.getString(3)
-                            val count = row.getLong(4)
+                            val area: String = row.getString(1)
+                            val city: String = row.getString(2)
+                            val adsId: String = row.getString(3)
+                            val count: Long = row.getLong(4)
                             (s"$area:$city:$adsId", count.toString)
                         }).toMap
                         import scala.collection.JavaConversions._

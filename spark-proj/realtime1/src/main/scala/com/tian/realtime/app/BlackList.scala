@@ -17,7 +17,7 @@ object BlackList {
                 adsInfoList.toIterator
             }else{
                 val client: Jedis = RedisUtil.getJedisClient
-                val blackList: util.Set[String] = client.smembers(s"blacklist:${adsInfoList(0).dayString}")
+                val blackList: util.Set[String] = client.smembers(s"blacklist:${adsInfoList.head.dayString}")
                 adsInfoList.filter(adsInfo => !blackList.contains(adsInfo.userId))
                     .toIterator
             }

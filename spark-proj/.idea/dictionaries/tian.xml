@@ -4,6 +4,7 @@
       <w>adid</w>
       <w>backlist</w>
       <w>bigdata</w>
+      <w>hgetall</w>
       <w>jedis</w>
       <w>metastore</w>
       <w>tian</w>

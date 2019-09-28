@@ -38,7 +38,7 @@ object RealtimeApp1 {
             .as[String]
             .map(line => {
                 val arr: Array[String] = line.split(",")
-                val date = new Date(arr(0).toLong)
+                val date: Date = new Date(arr(0).toLong)
                 AdsInfo(
                     arr(0).toLong,
                     new Timestamp(arr(0).toLong),
