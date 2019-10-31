@@ -1,1 +1,5 @@
+spark-realtime/*/target
+spark-review/*/target
 *.class
+spark/*/target
+scala/*/target

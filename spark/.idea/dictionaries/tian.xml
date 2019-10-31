@@ -5,6 +5,9 @@
       <w>dbtable</w>
       <w>hbase</w>
       <w>hdfs</w>
+      <w>namenode</w>
+      <w>namenodes</w>
+      <w>nameservices</w>
       <w>netcat</w>
       <w>proj</w>
       <w>rddkv</w>

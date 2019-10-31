@@ -7,16 +7,15 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="sparkcoreproject" />
-        <module name="sparkstreaming" />
-        <module name="sparkcore" />
+        <module name="spark-core-project" />
         <module name="sparksql" />
-        <module name="spark-core-proj" />
         <module name="spark-streaming" />
         <module name="sparksqlproj" />
         <module name="sparkcoreproj" />
         <module name="spark-core" />
-        <module name="spark-core-project" />
+        <module name="spark-core-proj" />
         <module name="spark-sql" />
+        <module name="sparkcore" />
         <module name="spark-sql-proj" />
         <module name="structuredstreaming" />
       </profile>
