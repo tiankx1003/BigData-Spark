@@ -11,7 +11,6 @@
     <modules>
         <module>spark-core</module>
         <module>spark-core-proj</module>
-        <module>spark-core-project</module>
         <module>spark-sql</module>
         <module>spark-sql-proj</module>
         <module>spark-streaming</module>

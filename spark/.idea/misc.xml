@@ -10,6 +10,7 @@
     </option>
     <option name="ignoredFiles">
       <set>
+        <option value="$PROJECT_DIR$/spark-core-project/pom.xml" />
         <option value="$PROJECT_DIR$/structured-streaming/pom.xml" />
         <option value="$PROJECT_DIR$/test-path/pom.xml" />
       </set>
