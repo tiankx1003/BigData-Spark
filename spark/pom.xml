@@ -14,6 +14,7 @@
         <module>spark-sql</module>
         <module>spark-sql-proj</module>
         <module>spark-streaming</module>
+        <module>scala</module>
     </modules>
     <dependencies>
         <dependency>

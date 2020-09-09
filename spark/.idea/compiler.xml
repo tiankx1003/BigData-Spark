@@ -10,6 +10,7 @@
         <module name="sparksqlproj" />
         <module name="sparkcore" />
         <module name="structuredstreaming" />
+        <module name="scala" />
         <module name="sparkcoreproj" />
         <module name="spark-core" />
         <module name="spark-core-proj" />
